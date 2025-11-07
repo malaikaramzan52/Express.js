@@ -1,3 +1,5 @@
+//Express js 
+//is a web application framework for Node js. It simplifies building web servers and APIs in Node.
 const express = require('express');
 const app = express();
 
