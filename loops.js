@@ -1,4 +1,4 @@
-//Loops and conditions in EJS template Engine
+
 // Loops and conditions in EJS template Engine
 import express from 'express';
 const app = express();
