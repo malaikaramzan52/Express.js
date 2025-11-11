@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Page</title>
+</head>
+<body>
+    <h1>User List Page</h1>
+    <!-- for loop -->
+    <ul>
+        <% for(let i=0;i<users.length;i++) {%>
+            <li><%= users[i] %></li>
+        <% } %>
+    </ul>
+    <!-- for each -->
+    <ul>
+        <% ages.forEach(function(age) { %>
+            <li><%= age %></li>
+        <% }); %>
+    </ul>
+    <!-- if condition on each person -->
+<% persons.forEach(function(person) { %>
+    <% if (person.age >= 18) { %>
+        <p><%= person.name %> is an adult.</p>
+    <% } else { %>
+        <p><%= person.name %> is a minor.</p>
+    <% } %>
+<% }); %>
+
+</body>
+</html>
