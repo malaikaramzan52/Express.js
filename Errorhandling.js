@@ -8,7 +8,7 @@ app.get("/",(req,res)=>{
     res.send("<h1>Welcome to the Home Page</h1>");
 })
 app.get("/users",(req,res)=>{
-    res.send1("<h1>Welcome to the Users Page</h1>");
+    res.send1("<h1>Welcome to the Users Page</h1>"); //Typo Error
 })
 app.get("/error",(req,res,next)=>{
     const error = new Error('')

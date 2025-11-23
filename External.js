@@ -7,6 +7,11 @@ const app = express();
 
 // Use morgan middleware for logging
 app.use(morgan('dev'));
+//IT shows :
+// HTTP method (GET, POST, etc.)
+// URL (/home, /login)
+// Status code (200, 404, 500, etc.)
+// Time taken to respond (12ms, 8ms)
 
 app.get("/", (req, res) => {
     res.send("Home Page");
@@ -21,6 +26,6 @@ app.get("/wait",(req,res)=>{
     },1000);
 })
 
-app.listen(8088, () => {
-    console.log("Server running on http://localhost:8088");
+app.listen(3000, () => {
+    console.log("Server running on http://localhost:3000");
 });

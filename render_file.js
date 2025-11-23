@@ -6,7 +6,7 @@ const publicpath = path.resolve('Public') // Path for CSS file
 
 // console.log(publicpath);
 // app.use() adds middleware that runs for every matching request (e.g., serving static files)
-app.use(express.static(publicpath));
+app.use(express.static(publicpath)); //Make all files in publicpath folder that is Accessible.
 
 // Home route
 app.get("/", (req, resp) => {
