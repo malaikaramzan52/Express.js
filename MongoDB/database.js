@@ -16,9 +16,9 @@ const client = new MongoClient(url);
 // Creates an async function because connecting to MongoDB and reading data takes time (asynchronous).
 
 async function dbConnection(){
-    //client.connect(); returns a promise
-    // Connects your Node.js application to MongoDB.
-    // This line waits until the connection is completed.
+      //client.connect(); returns a promise
+      // Connects your Node.js application to MongoDB.
+      // This line waits until the connection is completed.
       await client.connect()
       //select database name
       const db = client.db(dbName);

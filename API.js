@@ -1,6 +1,6 @@
 //API Example with dynamic Routes
 import express from 'express';
-import userData from './user.json' with{type:'json'}
+import userData from './user.json' with {type:'json'}
 const app=express();
 
 app.get("/",(req,res)=>{

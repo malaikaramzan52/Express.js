@@ -8,7 +8,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 // Middleware to parse URL-encoded bodies (form data) req.body
-//to get form Data
+// to get form Data
 app.use(express.urlencoded({ extended: true }));
 
 client.connect().then((connection) => {
@@ -46,7 +46,7 @@ client.connect().then((connection) => {
 app.listen(3000);
 
 //================================= Difference between insertOne and insertMany ================================//
-// insertOne: This method is used to insert a single document into a MongoDB collection. 
+//insertOne: This method is used to insert a single document into a MongoDB collection. 
 //Example:
 //db.collection.insertOne({ name: "Ali", age: 22 });
 
