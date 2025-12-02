@@ -15,6 +15,8 @@ app.get("/", async (req, res) => {
     const studentData = await studentModel.find()
     res.send(studentData)
 })
+
+
 //Post
 app.post("/save", async (req, res) => {
     console.log(req.body);
@@ -37,19 +39,40 @@ app.post("/save", async (req, res) => {
 })
 
 
+//PUT method
+app.put("/update/:id",async(req,res)=>{
+    
+    const id = req.params.id;
+    console.log(req.body,id);
+
+    const studentData = await studentModel.findByIdAndUpdate(id,{
+        ...req.body
+    })
+    res.send({
+        message:'data updated',
+        success:true,
+        info:null
+    })
+})
+
+
+
+// Delete Method
+app.delete("/delete/:id",async(req,res)=>{
+    
+    const id = req.params.id;
+    console.log(req.body,id);
+
+    const studentData = await studentModel.findByIdAndDelete(id)
+    res.send({
+        message:'Data Deleted',
+        success:true,
+        info:studentData
+    })
+})
+
 app.listen(3200);
 
-// async function dbConnection()              //it return promise
-// {
-//     await  mongoose.connect("mongodb://localhost:27017/school")   //mongodb connection
-//     const schema = mongoose.Schema({
-//         name:String,
-//         email:String,
-//         age:Number,
-//     })
-//     const studentsModel = mongoose.model('students',schema);
-//     const result = await studentsModel.find();    //It also return promise
-//     console.log(result);
-// }
-// dbConnection();
+
+
 
