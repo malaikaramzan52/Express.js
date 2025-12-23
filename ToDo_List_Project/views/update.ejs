@@ -4,25 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UpdateTask</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <%- include('navbar') %>
-    
+
     <div class="container">
-        <h1>Update Task</h1>
-         <form class = "todo-form" action="/update" method="post">
-            <input class="input"type="text" placeholder = "Enter Task Title" name="title">
-                <br>
-                <br>
-                <textarea class="input" placeholder = "Enter Task Description here..." name="description" id="">
+      <h1>Update Task</h1>
+      <form class="todo-form" action="/update/<%= task._id %>" method="post">
+        <input
+          value="<%= task.title %>"
+          class="input"
+          type="text"
+          placeholder="Enter Task Title"
+          name="title"
+        />
+        <br />
+        <br />
+        <textarea
+          class="input"
+          placeholder="Enter Task Description here..."
+          name="description"
+          id="">
+<%= task.description %></textarea>
 
-                </textarea>
-                <br>
-                <br>
-                <button class="btn" type="submit">Add New Task</button>
-         </form>
+        <br />
+        <br />
+        <button class="btn" type="submit">Add Updated Task</button>
+      </form>
     </div>
-
   </body>
 </html>
